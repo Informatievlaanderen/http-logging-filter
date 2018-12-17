@@ -1,0 +1,5 @@
+Microsoft.AspNetCore.Mvc.Core
+Microsoft.CSharp
+
+SourceLink.Embed.AllSourceFiles
+SourceLink.Copy.PdbFiles

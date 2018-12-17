@@ -1,0 +1,24 @@
+type file
+version 1.0.0
+
+id Be.Vlaanderen.Basisregisters.AspNetCore.Mvc.Logging
+title Be.Vlaanderen.Basisregisters.AspNetCore.Mvc.Logging
+
+authors Basisregisters Vlaanderen
+owners agentschap Informatie Vlaanderen <https://vlaanderen.be/informatie-vlaanderen>
+copyright Copyright (c) agentschap Informatie Vlaanderen
+requireLicenseAcceptance false
+projectUrl https://github.com/Informatievlaanderen/http-logging-filter
+iconUrl https://raw.githubusercontent.com/Informatievlaanderen/build-pipeline/master/logo.png
+licenseUrl https://opensource.org/licenses/MIT
+
+description A filter which logs HTTP calls. By default logs POST and PUT.
+
+dependencies
+  framework: netstandard20
+    Microsoft.AspNetCore.Mvc.Core >= LOCKEDVERSION
+    Microsoft.CSharp >= LOCKEDVERSION
+
+files
+  bin\Release\netstandard2.0\Be.Vlaanderen.Basisregisters.AspNetCore.Mvc.Logging.dll => lib\netstandard2.0
+  bin\Release\netstandard2.0\Be.Vlaanderen.Basisregisters.AspNetCore.Mvc.Logging.pdb => lib\netstandard2.0
