@@ -1,3 +1,15 @@
+# [2.0.0](https://github.com/informatievlaanderen/http-logging-filter/compare/v1.1.1...v2.0.0) (2019-11-18)
+
+
+### Code Refactoring
+
+* upgrade to netcoreapp30 ([193d1b5](https://github.com/informatievlaanderen/http-logging-filter/commit/193d1b5))
+
+
+### BREAKING CHANGES
+
+* Upgrade to .NET Core 3
+
 ## [1.1.1](https://github.com/informatievlaanderen/http-logging-filter/compare/v1.1.0...v1.1.1) (2019-10-28)
 
 
