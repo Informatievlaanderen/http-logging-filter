@@ -6,7 +6,6 @@ namespace Be.Vlaanderen.Basisregisters.AspNetCore.Mvc.Logging
     using System.Text;
     using Microsoft.AspNetCore.Mvc.Filters;
     using Microsoft.Extensions.Logging;
-    using Microsoft.Extensions.Logging.Internal;
     using Newtonsoft.Json;
 
     public class LoggingFilterFactory : IFilterFactory
@@ -60,7 +59,7 @@ namespace Be.Vlaanderen.Basisregisters.AspNetCore.Mvc.Logging
             }
         }
 
-        private static string MessageFormatter(object state, Exception error) => state.ToString();
+        private static string MessageFormatter(FormattedLogValues state, Exception error) => state.ToString();
 
         public void OnActionExecuted(ActionExecutedContext context) { }
 

@@ -1,5 +1,4 @@
-Microsoft.AspNetCore.Mvc.Core
-Microsoft.CSharp
+Newtonsoft.Json
 
 SourceLink.Embed.AllSourceFiles
 SourceLink.Copy.PdbFiles
