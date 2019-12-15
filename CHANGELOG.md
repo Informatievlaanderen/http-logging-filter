@@ -1,3 +1,10 @@
+# [2.1.0](https://github.com/informatievlaanderen/http-logging-filter/compare/v2.0.0...v2.1.0) (2019-12-15)
+
+
+### Features
+
+* upgrade to netcoreapp31 ([d2fd3bd](https://github.com/informatievlaanderen/http-logging-filter/commit/d2fd3bd857d690cdd268cba38e4679febe72f069))
+
 # [2.0.0](https://github.com/informatievlaanderen/http-logging-filter/compare/v1.1.1...v2.0.0) (2019-11-18)
 
 
