@@ -15,9 +15,9 @@ licenseUrl https://opensource.org/licenses/MIT
 description A filter which logs HTTP calls. By default logs POST and PUT.
 
 dependencies
-  framework: netcoreapp30
+  framework: netcoreapp31
     Newtonsoft.Json >= LOCKEDVERSION
 
 files
-  bin\Release\netcoreapp3.0\Be.Vlaanderen.Basisregisters.AspNetCore.Mvc.Logging.dll => lib\netcoreapp3.0
-  bin\Release\netcoreapp3.0\Be.Vlaanderen.Basisregisters.AspNetCore.Mvc.Logging.pdb => lib\netcoreapp3.0
+  bin\Release\netcoreapp3.1\Be.Vlaanderen.Basisregisters.AspNetCore.Mvc.Logging.dll => lib\netcoreapp3.1
+  bin\Release\netcoreapp3.1\Be.Vlaanderen.Basisregisters.AspNetCore.Mvc.Logging.pdb => lib\netcoreapp3.1
