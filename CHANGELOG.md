@@ -1,3 +1,10 @@
+## [2.2.1](https://github.com/informatievlaanderen/http-logging-filter/compare/v2.2.0...v2.2.1) (2020-03-02)
+
+
+### Bug Fixes
+
+* bump netcore to 3.1.2 ([f277fb7](https://github.com/informatievlaanderen/http-logging-filter/commit/f277fb702a7aa15b672b86cd858439d480ff5147))
+
 # [2.2.0](https://github.com/informatievlaanderen/http-logging-filter/compare/v2.1.0...v2.2.0) (2020-01-31)
 
 
