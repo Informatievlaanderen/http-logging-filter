@@ -1,3 +1,11 @@
+## [2.2.2](https://github.com/informatievlaanderen/http-logging-filter/compare/v2.2.1...v2.2.2) (2020-05-07)
+
+
+### Bug Fixes
+
+* move to GH-actions ([385096d](https://github.com/informatievlaanderen/http-logging-filter/commit/385096d372e3dea50683acb8e07d90d201dec46b))
+* poke gh-actions? ([3cec54c](https://github.com/informatievlaanderen/http-logging-filter/commit/3cec54cd9b1cdff82b3b10a6e2ab07a19ea5f91f))
+
 ## [2.2.1](https://github.com/informatievlaanderen/http-logging-filter/compare/v2.2.0...v2.2.1) (2020-03-02)
 
 
