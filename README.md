@@ -1,4 +1,4 @@
-# Be.Vlaanderen.Basisregisters.AspNetCore.Mvc.Logging
+# Be.Vlaanderen.Basisregisters.AspNetCore.Mvc.Logging [![Build Status](https://github.com/Informatievlaanderen/http-logging-filter/workflows/CI/badge.svg)](https://github.com/Informatievlaanderen/http-logging-filter/actions)
 
 A filter which logs HTTP calls.
 By default logs `POST` and `PUT`.
