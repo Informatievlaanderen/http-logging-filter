@@ -1,6 +1,6 @@
 {
   "name": "http-logging-filter",
-  "version": "2.2.4",
+  "version": "2.2.5",
   "description": "A filter which logs HTTP calls. By default logs POST and PUT.",
   "author": "Basisregisters Vlaanderen",
   "license": "MIT",
