@@ -32,4 +32,3 @@ public IServiceProvider ConfigureServices(IServiceCollection services)
     ...
 }
 ```
-
