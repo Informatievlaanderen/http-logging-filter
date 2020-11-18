@@ -1,3 +1,10 @@
+## [2.2.7](https://github.com/informatievlaanderen/http-logging-filter/compare/v2.2.6...v2.2.7) (2020-11-18)
+
+
+### Bug Fixes
+
+* remove set-env usage in gh-actions ([c86a7a9](https://github.com/informatievlaanderen/http-logging-filter/commit/c86a7a92548e9f0bb90dcfc8e38cf4c6a464e748))
+
 ## [2.2.6](https://github.com/informatievlaanderen/http-logging-filter/compare/v2.2.5...v2.2.6) (2020-09-21)
 
 
