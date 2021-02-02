@@ -1,3 +1,10 @@
+## [2.2.10](https://github.com/informatievlaanderen/http-logging-filter/compare/v2.2.9...v2.2.10) (2021-02-02)
+
+
+### Bug Fixes
+
+* move to 5.0.2 ([b03ea3c](https://github.com/informatievlaanderen/http-logging-filter/commit/b03ea3c5ca5e65253c59cd1c7291f4038de8c7f3))
+
 ## [2.2.9](https://github.com/informatievlaanderen/http-logging-filter/compare/v2.2.8...v2.2.9) (2020-12-17)
 
 
