@@ -1,3 +1,15 @@
+# [3.0.0](https://github.com/informatievlaanderen/http-logging-filter/compare/v2.2.11...v3.0.0) (2022-03-24)
+
+
+### Features
+
+* move to dotnet 6.0.3 ([b431c07](https://github.com/informatievlaanderen/http-logging-filter/commit/b431c07c524c0cc7c34eaeec93bd123422f36c3f))
+
+
+### BREAKING CHANGES
+
+* move to dotnet 6.0.3
+
 ## [2.2.11](https://github.com/informatievlaanderen/http-logging-filter/compare/v2.2.10...v2.2.11) (2021-05-28)
 
 
