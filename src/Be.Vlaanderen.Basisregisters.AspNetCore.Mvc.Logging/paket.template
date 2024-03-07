@@ -15,9 +15,9 @@ licenseUrl https://opensource.org/licenses/MIT
 description A filter which logs HTTP calls. By default logs POST and PUT.
 
 dependencies
-  framework: net6.0
+  framework: 8.0
     Newtonsoft.Json >= LOCKEDVERSION
 
 files
-  bin\Release\net6.0\Be.Vlaanderen.Basisregisters.AspNetCore.Mvc.Logging.dll => lib\net6.0
-  bin\Release\net6.0\Be.Vlaanderen.Basisregisters.AspNetCore.Mvc.Logging.pdb => lib\net6.0
+  Be.Vlaanderen.Basisregisters.AspNetCore.Mvc.Logging.dll => lib\8.0
+  Be.Vlaanderen.Basisregisters.AspNetCore.Mvc.Logging.pdb => lib\8.0
