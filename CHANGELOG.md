@@ -1,3 +1,10 @@
+## [4.0.1](https://github.com/informatievlaanderen/http-logging-filter/compare/v4.0.0...v4.0.1) (2024-03-11)
+
+
+### Bug Fixes
+
+* **paket:** use correct dependency ([1729205](https://github.com/informatievlaanderen/http-logging-filter/commit/1729205043753626faa65873a5f999709da22755))
+
 # [4.0.0](https://github.com/informatievlaanderen/http-logging-filter/compare/v3.0.0...v4.0.0) (2024-03-07)
 
 
