@@ -1,3 +1,15 @@
+# [5.0.0](https://github.com/informatievlaanderen/http-logging-filter/compare/v4.0.1...v5.0.0) (2025-04-04)
+
+
+### Code Refactoring
+
+* use renovate and nuget + update pipeline ([ef4d0c4](https://github.com/informatievlaanderen/http-logging-filter/commit/ef4d0c42f9134d955acec85ea8c4475cdeacde41))
+
+
+### BREAKING CHANGES
+
+* update to dotnet 9
+
 ## [4.0.1](https://github.com/informatievlaanderen/http-logging-filter/compare/v4.0.0...v4.0.1) (2024-03-11)
 
 
