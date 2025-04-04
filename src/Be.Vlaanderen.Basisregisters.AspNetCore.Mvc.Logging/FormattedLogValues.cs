@@ -16,30 +16,31 @@ namespace Microsoft.Extensions.Logging
     internal readonly struct FormattedLogValues : IReadOnlyList<KeyValuePair<string, object>>
     {
         internal const int MaxCachedFormatters = 1024;
+
         private const string NullFormat = "[null]";
         private static int _count;
-        private static ConcurrentDictionary<string, LogValuesFormatter> _formatters = new ConcurrentDictionary<string, LogValuesFormatter>();
-        private readonly LogValuesFormatter _formatter;
-        private readonly object[] _values;
+        private static readonly ConcurrentDictionary<string, LogValuesFormatter> Formatters = new ConcurrentDictionary<string, LogValuesFormatter>();
+        private readonly LogValuesFormatter? _formatter;
+        private readonly object[]? _values;
         private readonly string _originalMessage;
 
         // for testing purposes
-        internal LogValuesFormatter Formatter => _formatter;
+        internal LogValuesFormatter? Formatter => _formatter;
 
-        public FormattedLogValues(string format, params object[] values)
+        public FormattedLogValues(string? format, params object[]? values)
         {
             if (values != null && values.Length != 0 && format != null)
             {
                 if (_count >= MaxCachedFormatters)
                 {
-                    if (!_formatters.TryGetValue(format, out _formatter))
+                    if (!Formatters.TryGetValue(format, out _formatter))
                     {
                         _formatter = new LogValuesFormatter(format);
                     }
                 }
                 else
                 {
-                    _formatter = _formatters.GetOrAdd(format, f =>
+                    _formatter = Formatters.GetOrAdd(format, f =>
                     {
                         Interlocked.Increment(ref _count);
                         return new LogValuesFormatter(f);
@@ -69,7 +70,10 @@ namespace Microsoft.Extensions.Logging
                     return new KeyValuePair<string, object> ("{OriginalFormat}", _originalMessage);
                 }
 
-                return _formatter.GetValue(_values, index);
+                if (_formatter != null && _values != null && index < _values.Length)
+                    return _formatter.GetValue(_values, index);
+
+                return new KeyValuePair<string, object>();
             }
         }
 
@@ -88,7 +92,7 @@ namespace Microsoft.Extensions.Logging
 
         public IEnumerator<KeyValuePair<string, object>> GetEnumerator()
         {
-            for (int i = 0; i < Count; ++i)
+            for (var i = 0; i < Count; ++i)
             {
                 yield return this[i];
             }

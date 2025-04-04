@@ -5,6 +5,7 @@ namespace Be.Vlaanderen.Basisregisters.AspNetCore.Mvc.Logging
     using System.Linq;
     using System.Text;
     using Microsoft.AspNetCore.Mvc.Filters;
+    using Microsoft.Extensions.DependencyInjection;
     using Microsoft.Extensions.Logging;
     using Newtonsoft.Json;
 
@@ -18,10 +19,10 @@ namespace Be.Vlaanderen.Basisregisters.AspNetCore.Mvc.Logging
 
         public LoggingFilterFactory() : this(null) { }
 
-        public LoggingFilterFactory(string[] methodsToLog) => _methodsToLog = methodsToLog ?? DefaultMethodsToLog;
+        public LoggingFilterFactory(string[]? methodsToLog) => _methodsToLog = methodsToLog ?? DefaultMethodsToLog;
 
         public IFilterMetadata CreateInstance(IServiceProvider serviceProvider)
-            => new LoggingFilter((ILogger<LoggingFilter>)serviceProvider.GetService(typeof(ILogger<LoggingFilter>)), _methodsToLog);
+            => new LoggingFilter((ILogger<LoggingFilter>)serviceProvider.GetRequiredService(typeof(ILogger<LoggingFilter>)), _methodsToLog);
     }
 
     public class LoggingFilter : IActionFilter
@@ -59,11 +60,11 @@ namespace Be.Vlaanderen.Basisregisters.AspNetCore.Mvc.Logging
             }
         }
 
-        private static string MessageFormatter(FormattedLogValues state, Exception error) => state.ToString();
+        private static string MessageFormatter(FormattedLogValues state, Exception? error) => state.ToString();
 
         public void OnActionExecuted(ActionExecutedContext context) { }
 
-        private static bool IsValidJson(string strInput, out dynamic jsonObject)
+        private static bool IsValidJson(string strInput, out dynamic? jsonObject)
         {
             jsonObject = null;
             strInput = strInput.Trim();
