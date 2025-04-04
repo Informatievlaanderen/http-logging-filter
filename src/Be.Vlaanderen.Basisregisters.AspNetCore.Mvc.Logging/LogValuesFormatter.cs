@@ -16,8 +16,8 @@ namespace Microsoft.Extensions.Logging
     internal class LogValuesFormatter
     {
         private const string NullValue = "(null)";
-        private static readonly object[] EmptyArray = new object[0];
-        private static readonly char[] FormatDelimiters = {',', ':'};
+        private static readonly object[] EmptyArray = [];
+        private static readonly char[] FormatDelimiters = [',', ':'];
         private readonly string _format;
         private readonly List<string> _valueNames = new List<string>();
 
@@ -113,11 +113,11 @@ namespace Microsoft.Extensions.Logging
             return findIndex == -1 ? endIndex : findIndex;
         }
 
-        public string Format(object[] values)
+        public string Format(object[]? values)
         {
             if (values != null)
             {
-                for (int i = 0; i < values.Length; i++)
+                for (var i = 0; i < values.Length; i++)
                 {
                     values[i] = FormatArgument(values[i]);
                 }
@@ -173,7 +173,7 @@ namespace Microsoft.Extensions.Logging
             return valueArray;
         }
 
-        private object FormatArgument(object value)
+        private object FormatArgument(object? value)
         {
             if (value == null)
             {
