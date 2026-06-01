@@ -1,3 +1,10 @@
+# [5.1.0](https://github.com/informatievlaanderen/http-logging-filter/compare/v5.0.0...v5.1.0) (2026-06-01)
+
+
+### Features
+
+* update packages ([f55ca39](https://github.com/informatievlaanderen/http-logging-filter/commit/f55ca39b09ad4a212f1150ebebbfeeda6addb81d))
+
 # [5.0.0](https://github.com/informatievlaanderen/http-logging-filter/compare/v4.0.1...v5.0.0) (2025-04-04)
 
 
