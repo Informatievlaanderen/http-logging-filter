@@ -38,8 +38,22 @@ namespace Be.Vlaanderen.Basisregisters.AspNetCore.Mvc.Logging
 
         public void OnActionExecuting(ActionExecutingContext context)
         {
+            // The body is only ever logged at debug level, so with debug logging off reading it achieves nothing -
+            // and it is not a free nothing: ReadToEnd below is a synchronous read of a network stream, which holds on
+            // to a thread pool thread for as long as the client takes to send its body. On an API that accepts large
+            // uploads, enough of those at once stop the server from draining its sockets quickly enough, and Kestrel
+            // aborts the request with "Reading the request body timed out due to data arriving too slowly. See
+            // MinRequestBodyDataRate." - thrown from right here.
+            if (!_logger.IsEnabled(LogLevel.Debug))
+                return;
+
             var request = context.HttpContext.Request;
             if (!_methodsToLog.Contains(request.Method.ToLowerInvariant()))
+                return;
+
+            // Without buffering the body can only be read once, and reading it here would leave nothing for the model
+            // binder. Rewinding it would throw as well.
+            if (!request.Body.CanSeek)
                 return;
 
             request.Body.Position = 0;
