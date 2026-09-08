@@ -1,3 +1,10 @@
+## [5.1.1](https://github.com/informatievlaanderen/http-logging-filter/compare/v5.1.0...v5.1.1) (2026-09-08)
+
+
+### Bug Fixes
+
+* do not read the request body when debug logging is off ([721b638](https://github.com/informatievlaanderen/http-logging-filter/commit/721b6388391bcec7bfb675433dc46af79e3f3568))
+
 # [5.1.0](https://github.com/informatievlaanderen/http-logging-filter/compare/v5.0.0...v5.1.0) (2026-06-01)
 
 
